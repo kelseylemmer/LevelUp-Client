@@ -41,7 +41,7 @@ export const EditEvent = () => {
 
   return (
     <form className="gameForm">
-      <h2 className="gameForm__title">Edit Game</h2>
+      <h2 className="gameForm__title">Edit Event</h2>
       <fieldset>
         <div className="form-group">
           <label htmlFor="title">Event Title: </label>
@@ -75,7 +75,7 @@ export const EditEvent = () => {
             name="game"
             required autoFocus
             className="form-control"
-            value={currentEvent.game.id}
+            value={currentEvent?.game?.id}
             onChange={changeEventState}
           >
             <option value="">Select Game</option>
@@ -108,7 +108,7 @@ export const EditEvent = () => {
           const event = {
             title: currentEvent.title,
             date_time: currentEvent.date_time,
-            game: parseInt(currentEvent.game.id),
+            game: parseInt(currentEvent.game),
             location: currentEvent.location
           }
 
