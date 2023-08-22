@@ -120,7 +120,7 @@ export const GameForm = () => {
             title: currentGame.title,
             maker: currentGame.maker,
             number_of_players: parseInt(currentGame.numberOfPlayers),
-            skill_level: parseInt(currentGame.skillLevel),
+            skill_level: currentGame.skillLevel,
             game_type: parseInt(currentGame.gameTypeId)
           }
 

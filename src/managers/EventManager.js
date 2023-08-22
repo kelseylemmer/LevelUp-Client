@@ -16,7 +16,7 @@ export const createEvent = (event) => {
     },
     body: JSON.stringify(event)
   })
-    .then()
+    .then(response => response.json())
 }
 
 export const getEventById = (id) => {
