@@ -27,3 +27,14 @@ export const getEventById = (id) => {
   })
     .then(response => response.json())
 }
+
+export const editEvent = (id, event) => {
+  return fetch(`http://localhost:8000/events/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": `Token ${localStorage.getItem("lu_token")}`
+    },
+    body: JSON.stringify(event),
+  })
+};

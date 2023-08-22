@@ -37,3 +37,14 @@ export const getGameById = (id) => {
   })
     .then(response => response.json())
 }
+
+export const editGame = (id, game) => {
+  return fetch(`http://localhost:8000/games/${id}`, {
+    method: "PUT",
+    headers: {
+      "Authorization": `Token ${localStorage.getItem("lu_token")}`,
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(game),
+  })
+};

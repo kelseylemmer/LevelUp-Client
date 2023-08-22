@@ -8,6 +8,9 @@ import { GameForm } from "../components/game/GameForm"
 import { EventForm } from "../components/event/EventForm"
 import { GameDetails } from "../components/game/GameDetails"
 import { EventDetails } from "../components/event/EventDetails"
+import { EditEvent } from "../components/event/EditEvent"
+import { EditGame } from "../components/game/EditGame"
+
 
 
 
@@ -27,6 +30,8 @@ export const ApplicationViews = () => {
                 <Route path="/events/new" element={<EventForm />} />
                 <Route path="/games/:id" element={<GameDetails />} />
                 <Route path="/events/:id" element={<EventDetails />} />
+                <Route path="/events/:id/update" element={<EditEvent />} />
+                <Route path="/games/:id/update" element={<EditGame />} />
             </Route>
         </Routes>
     </>
